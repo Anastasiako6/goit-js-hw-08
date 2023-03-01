@@ -9,9 +9,11 @@ form.addEventListener('input', throttle(onInputData, 500));
 form.addEventListener('submit', onFormSubmit);
 reloadPage();
 
-
+function infSave() {
+  return { email: email.value, message: message.value };
+}
 function onInputData (e) {
-    localStorage.setItem(LOCAL_KEY, JSON.stringify(infSave))
+  localStorage.setItem(LOCAL_KEY, JSON.stringify(infSave))
 }
 
 function onFormSubmit(e) {
