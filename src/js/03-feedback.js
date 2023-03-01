@@ -11,7 +11,7 @@ reloadPage();
 
 
 function onInputData (e) {
-    infSave = { email: email.value, message: message.value };
+   const infSave = { email: email.value, message: message.value };
     localStorage.setItem(LOCAL_KEY, JSON.stringify(infSave))
 }
 
