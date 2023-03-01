@@ -9,10 +9,9 @@ form.addEventListener('input', throttle(onInputData, 500));
 form.addEventListener('submit', onFormSubmit);
 reloadPage();
 
-function infSave() {
-  return { email: email.value, message: message.value };
-}
-function onInputData (e) {
+
+function onInputData(e) {
+  const infSave = { email: email.value, message: message.value };
   localStorage.setItem(LOCAL_KEY, JSON.stringify(infSave))
 }
 
@@ -21,10 +20,9 @@ function onFormSubmit(e) {
     if (email.value === '' || message.value === '') {
         return alert('Всі поля мають бути заповненні')
     } 
-
     console.log({ email: email.value, message: message.value });
     
-    form.reset();
+    forme.currentTarget.reset();
     localStorage.removeItem(LOCAL_KEY);
 }
 
