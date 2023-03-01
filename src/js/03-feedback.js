@@ -7,6 +7,7 @@ const LOCAL_KEY = 'feedback-form-state';
 
 form.addEventListener('input', throttle(onInputData, 500));
 form.addEventListener('submit', onFormSubmit);
+reloadPage();
 
 
 function onInputData (e) {
@@ -34,4 +35,3 @@ function reloadPage() {
     message.value = formData.message;
   }
 }
-reloadPage();
