@@ -22,7 +22,7 @@ function onFormSubmit(e) {
     } 
     console.log({ email: email.value, message: message.value });
     
-    form.currentTarget.reset();
+    e.currentTarget.reset();
     localStorage.removeItem(LOCAL_KEY);
 }
 
